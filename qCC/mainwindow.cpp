@@ -484,8 +484,8 @@ void MainWindow::connectActions()
 	});
 
 	//'M': toggles selected items materials/textures visibility
-	connect(m_UI->actionToggleMaterials, &QAction::triggered, this, [=]() {
-		toggleSelectedEntitiesProperty( ccEntityAction::TOGGLE_PROPERTY::MATERIAL );
+	connect(m_UI->actionMerge, &QAction::triggered, this, [=]() {
+	  toggleSelectedEntitiesProperty( &MainWindow::doActionMerge );
 	});
 
 	//TODO... but not ready yet ;)
